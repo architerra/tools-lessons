@@ -1,4 +1,4 @@
-export default async function fetchUser(userId) {
+export async function fetchUser(userId) {
   console.log('implementation for fetchUser');
 
   try {
