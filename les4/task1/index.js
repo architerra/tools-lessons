@@ -4,9 +4,9 @@ import './polyfills/array-flatMap.js';
 // импортируйте все полифилы из папки polyfills
 import calcExpression, { sum, mult } from './calculator/index.js';
 // импортируйте ф-цию fetchUser из profile/gateway.js под таким же именем
-import { fetchUser } from './polyfills/gateway.js';
+import { fetchUser } from './profile/gateway.js';
 // импортируйте ф-цию printProfile из profile/index.js под таким же именем
-import { printProfile } from './polyfills/index.js';
+import { printProfile } from './profile/index.js';
 
 const calcResult = calcExpression('1 + 2');
 const sumResult = sum(1, 2);
