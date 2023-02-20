@@ -1,18 +1,15 @@
-// экспортируйте sum и mult как именной export
+import './polyfills/array-flat';
+import './polyfills/array-flatMap';
 
-export const sum = (a, b) => {
-  console.log('implementation for sum');
-  // ... implementation
-};
+// импортируйте все полифилы из папки polyfills
+import calcExpression, { sum, mult } from './calculator/index.js';
+// импортируйте ф-цию fetchUser из profile/gateway.js под таким же именем
+import fetchUser from './polyfills/gateway';
+// импортируйте ф-цию printProfile из profile/index.js под таким же именем
+import { printProfile } from './polyfills/index.js';
 
-export const mult = (a, b) => {
-  console.log('implementation for mult');
-  // ... implementation
-};
-
-// экспортируйте calc как export по умолчанию
-
-export default expression => {
-  console.log('implementation for calc');
-  // ... implementation
-};
+const calcResult = calcExpression('1 + 2');
+const sumResult = sum(1, 2);
+const multResult = mult(1, 2);
+const userDataPromise = fetchUser('facebook');
+printProfile({ name: 'Tom', from: 'The World' });
