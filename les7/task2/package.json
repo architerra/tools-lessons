@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "copy:html": "cp ./src/index.html ./dist/index.html",
     "build:scripts": "webpack",
     "clean": "rm -rf ./dist",
-    "watch": "webpack -d --devtools eval-source-maps -w",
-    "build": "webpack"
+    "build": "npm-run-all clean build:scripts copy:*"
   },
   "keywords": [],
   "author": "",
